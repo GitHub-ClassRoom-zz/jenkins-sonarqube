@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "org.sonarqube" version "2.7"
+}
+
+apply plugin: 'pmd'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'jacoco'
+apply plugin: 'eclipse'
+
+group 'org.example'
+version '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'cn.hutool:hutool-all:5.7.21'
+
+    testImplementation 'junit:junit:4.12'
+}
